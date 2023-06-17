@@ -8,8 +8,21 @@ variable "list"{
 default=[1,2,3,4]
 }
 
-variable "map"{}
+variable "map"{
+	default={
+	"fruits"={
+	m:mango
+	a:apple
+	b:banana
+	}
+	"choco"={
+	a:kitkat
+	b:dairymilk
+	}
+	
+	}
+}
 
 output "sample" {
- value = var.list
+ value = var.map
 }
