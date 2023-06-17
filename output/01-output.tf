@@ -5,8 +5,7 @@ variable "addition"{
 
 variable "list"{
 
-default:
-	[1,2,3,4]
+default=[1,2,3,4]
 }
 
 variable "map"{}
