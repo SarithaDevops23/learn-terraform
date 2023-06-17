@@ -1,5 +1,5 @@
 variable "addition"{
-   a=10+20
+  default=10+20
 
 }
 
