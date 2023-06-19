@@ -4,17 +4,17 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.sg.id]
 
   tags = {
-    Name = "sample1"
+    Name = var.name
   }
  }
   data "aws_ami" "example" {
-  owners = ["973714476881"]
+  owners = ["973714476881"] 
   most_recent = true
   name_regex = "Centos-8-DevOps-Practice"
  }
 
  resource "aws_security_group" "sg" {
-  name        = "sample1"
+  name        = var.name
   description = "Allow TLS inbound traffic"
   
 
@@ -35,7 +35,9 @@ resource "aws_instance" "web" {
   }
 
    tags = {
-    Name = "sample1"
+    Name = var.name
   }
 
   }
+
+  variable "name"{}

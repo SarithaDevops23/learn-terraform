@@ -13,6 +13,3 @@ resource "aws_instance" "web" {
   name_regex = "Centos-8-DevOps-Practice"
  }
 
- provider "aws"{
-  region = "us-east-1"
- }
