@@ -9,6 +9,7 @@ resource "aws_instance" "web" {
  }
   data "aws_ami" "example" {
   most_recent = true
+  owners       = [099720109477]
   name_regex = "Centos-8-Devops-Practice"
  }
 
@@ -30,6 +31,7 @@ resource "aws_instance" "web" {
     to_port          = 0
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
   }
 
    tags = {
