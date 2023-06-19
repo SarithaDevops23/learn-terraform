@@ -10,14 +10,13 @@ default=[1,2,3,4]
 
 variable "map"{
 	default={
-	"fruits"={
-	m:mango
-	a:apple
-	b:banana
+	fruits={
+	a="apple"
+	b:"banana"
 	}
-	"choco"={
-	a:kitkat
-	b:dairymilk
+	choco={
+	a="kitkat"
+	b="dairymilk"
 	}
 	
 	}
