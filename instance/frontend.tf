@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
  }
  
  data "aws_ami" "example" {
-  owners = ["532427859183"]
+  owners = ["amazon"]
   most_recent = true
   name_regex = "Centos-8-Devops-Practice"
  }
