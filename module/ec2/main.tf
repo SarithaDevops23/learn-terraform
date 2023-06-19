@@ -8,9 +8,9 @@ resource "aws_instance" "web" {
   }
  }
   data "aws_ami" "example" {
+  owners = ["973714476881"]
   most_recent = true
-  owners = ["099720109477"]
-  name_regex = "Centos-8-Devops-Practice"
+  name_regex = "Centos-8-DevOps-Practice"
  }
 
  resource "aws_security_group" "sg" {
