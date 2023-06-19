@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\instance",
+    "\\output"
   ],
-  "SelectedNode": "\\C:\\Users\\user\\Source\\Repos\\learn-terraform",
+  "SelectedNode": "\\output\\01-output.tf",
   "PreviewInSolutionExplorer": false
 }
