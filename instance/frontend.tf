@@ -6,15 +6,8 @@ resource "aws_instance" "web" {
   tags = {
     Name = "frontend"
   }
- }
- 
- data "aws_ami" "example" {
-  owners = ["973714476881"]
-  most_recent = true
-  name_regex = "Centos-8-DevOps-Practice"
- }
 
- connection {
+   connection {
     type     = "ssh"
     user     = "centos"
     password = "DevOps321"
@@ -27,4 +20,13 @@ resource "aws_instance" "web" {
       "ansible-pull -i localhost, -U  https://github.com/SarithaDevops23/roboshop-ansible  roboshop.yml -e env=dev -e role_name=frontend "
     ]
   }
+
+ }
+ 
+ data "aws_ami" "example" {
+  owners = ["973714476881"]
+  most_recent = true
+  name_regex = "Centos-8-DevOps-Practice"
+ }
+
 
