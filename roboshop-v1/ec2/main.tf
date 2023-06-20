@@ -36,7 +36,7 @@ resource "aws_instance" "web" {
  }
 
  resource "aws_security_group" "sg" {
-  name        = "allow-all"
+  name        = var.name
   description = "Allow TLS inbound traffic"
   
 
@@ -55,7 +55,7 @@ resource "aws_instance" "web" {
   }
 
    tags = {
-    Name = "allow-all"
+    Name = var.name
   }
 
   }
