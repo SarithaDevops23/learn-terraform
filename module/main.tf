@@ -8,10 +8,10 @@ source = "./ec2"
 name= "M2"
 }
 
-output "sample1"{
+output "M1"{
 	value=module.sample1.public_ip
 }
 
-output "sample2"{
+output "M2"{
 	value=module.sample2.public_ip
 }
