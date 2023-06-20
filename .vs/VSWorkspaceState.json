@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\datasources",
     "\\instance",
+    "\\module",
+    "\\module\\ec2",
     "\\output"
   ],
-  "SelectedNode": "\\output\\01-output.tf",
+  "SelectedNode": "\\instance\\frontend.tf",
   "PreviewInSolutionExplorer": false
 }
