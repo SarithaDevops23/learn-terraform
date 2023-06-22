@@ -12,14 +12,15 @@ resource "aws_instance" "web" {
 
  resource "null_resource" "ansible"{
   depends_on = [aws_instance.web,aws_route53_record.www]
-  connection {
+ 
+
+  provisioner "remote-exec" {
+    connection {
     type     = "ssh"
     user     = "centos"
     password = "DevOps321"
     host     = self.public_ip
-  }
-
-  provisioner "remote-exec" {
+   }
     inline = [
       "sudo labauto ansible",
       "ansible-pull -i localhost, -U  https://github.com/SarithaDevops23/roboshop-ansible  roboshop.yml -e env=dev -e role_name=${var.name}"
