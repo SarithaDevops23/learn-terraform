@@ -4,12 +4,12 @@ source = "./ec2"
 name = each.key
 }
 
-variable "instsances"{
+variable "instances"{
 
 	default={
 		frontend={}
 		mongodb={}
-		catatlogue={}
+		catalogue={}
 		redis={}
 		user={}
 		cart={}
