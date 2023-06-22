@@ -7,7 +7,12 @@ resource "aws_instance" "web" {
     Name = var.name
   }
 
-   connection {
+  
+ }
+
+ resource "null_resource" "ansible"{
+  depends_on = [aws_instance.web,aws_route53_record.www]
+  connection {
     type     = "ssh"
     user     = "centos"
     password = "DevOps321"
