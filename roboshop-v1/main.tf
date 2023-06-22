@@ -1,5 +1,5 @@
 module "instances"{
-for-each =var.instances
+for_each =var.instances
 source = "./ec2"
 name = each.key
 }
