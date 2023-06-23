@@ -12,5 +12,6 @@ variable "params"{
 			{name = "demo2", type="String", value = "demo2"}
 
 ]
+}
 
 
